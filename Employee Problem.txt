@@ -1,0 +1,27 @@
+#include<stdio.h>
+void employee(FILE*);
+void employee(FILE*fp);
+{
+    int empid;
+    char ename[30];
+    long long int esalary;
+    char egender;
+    printf("enter empid,ename,esalary and egender");
+    scanf("%d%s%||d%c",&empid,&enmae,&esalary,&egender);
+    fprintf(fp,"%d/n%s/n%||d/n%c/n",empid,ename,esalary,egender);
+    fclose(fp);
+}
+int main()
+{
+    FILE*fp;
+    fp=fopen("input 5.txt","a");
+    if(fp==NULL)
+    {
+        printf("File not created");
+    }
+    else
+    {
+        employee(fp);
+    }
+    return 0;
+}
